@@ -1,1 +1,1 @@
-console.log("Joke Generator App");
+ console.log("Joke Generator App");
