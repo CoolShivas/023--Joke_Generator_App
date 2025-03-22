@@ -1,4 +1,5 @@
 import https from "https";
+import chalk from "chalk";
 
 
 const getJokes = () => {
@@ -12,6 +13,9 @@ const getJokes = () => {
         response.on("end", () => {
             const joking = JSON.parse(data);
             console.log(joking);
+            console.log(chalk.yellow.bgYellow.bold(`Here is the random ${joking.type} joke :`));
+            console.log(chalk.red (`${joking.setup}`));
+            console.log(chalk.blue.bgRed.bold(`${joking.punchline}`));
             // // Here, we are getting the Output on Terminal as :- 
             // // {
             // //     type: 'general',
